@@ -1,0 +1,113 @@
+@import "./utilitaires/variables.scss";
+@import "./utilitaires/mixin.scss";
+
+// General //
+* {
+    @include reset-browser;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+body {
+    @include text-typo;
+    font-size: 1rem;
+}
+
+.btn {
+    height: 50px;
+    border-radius: 25px;
+    box-shadow: $btn-shadow;
+    background: $btn-color;
+    border: none;
+    outline: none;
+    padding: 16px 48px;
+}
+
+// Header //
+.header {
+    @include flex;
+    @include flex-center;
+    height: 63px;
+    background: $white-color;
+    box-shadow: $main-shadow;
+
+    &__logo {
+        width: 197px;
+        height: 36px;
+        padding: 14px 89px 13px 89px;
+    }
+}
+
+// Section Location //
+.location {
+    @include flex;
+    @include flex-center;
+    flex-direction: column;
+    background: $background-color;
+
+    &__form {
+        @include flex;
+        @include flex-center;
+        width: 100%;
+        gap: 17px;
+        color: $dark-grey-color;
+        background: $grey-color;
+    }
+
+    &__form > i {
+        width: 12px;
+        height: 16px;
+        color: $dark-grey-color;
+        margin-left: 80px;
+    }
+
+    &__form > input[type="text"] {
+        height: 50px;
+        font-size: 1rem;
+        font-weight: 500;
+        border: none;
+        outline: none;
+        color: $dark-grey-color;
+        background: $grey-color;
+    }
+}
+
+.hero {
+    @include flex;
+    @include flex-center;
+    flex-direction: column;
+
+    &__title {
+        @include bold-text-typo;
+        @include text-center;
+        width: 275px;
+        height: 68px;
+        font-size: 1.5rem;
+        margin-top: 39px;
+        color: $black-color;
+    }
+
+    &__text {
+        @include thin-text-typo;
+        @include text-center;
+        width: 315px;
+        height: 46px;
+        font-size: 1.125rem;
+        color: $dark-grey-color;
+    }
+
+    &__btn {
+        @include btn-text-typo;
+        @include text-center;
+        color: $white-color;
+        padding: 13px 18px;
+        margin-top: 27px;
+        margin-bottom: 57px;
+    }
+}
+

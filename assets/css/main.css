@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 768px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.btn {
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(182deg, rgb(147, 86, 220), rgb(255, 121, 218));
+  border: none;
+  outline: none;
+  padding: 16px 48px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+  background: #FFF;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.header__logo {
+  width: 197px;
+  height: 36px;
+  padding: 14px 89px 13px 89px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #F6F6F6;
+}
+.location__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 17px;
+  color: #353535;
+  background: #EAEAEA;
+}
+.location__form > i {
+  width: 12px;
+  height: 16px;
+  color: #353535;
+  margin-left: 80px;
+}
+.location__form > input[type=text] {
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  color: #353535;
+  background: #EAEAEA;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero__title {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 400;
+  font-weight: 700;
+  text-align: center;
+  width: 275px;
+  height: 68px;
+  font-size: 1.5rem;
+  margin-top: 39px;
+  color: #101010;
+}
+.hero__text {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 400;
+  font-weight: 300;
+  text-align: center;
+  width: 315px;
+  height: 46px;
+  font-size: 1.125rem;
+  color: #353535;
+}
+.hero__btn {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 400;
+  font-weight: 500;
+  text-align: center;
+  color: #FFF;
+  padding: 13px 18px;
+  margin-top: 27px;
+  margin-bottom: 57px;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -14,11 +14,24 @@
 }
 
 body {
-    @include text-typo;
+    @include text-typo(400);
     font-size: 1rem;
 }
 
+.typo__thin {
+    @include text-typo(300);
+}
+
+.typo__btn {
+    @include text-typo(500);
+}
+
+.typo__bold {
+    @include text-typo(700);
+}
+
 .btn {
+    font-size: 1rem;
     height: 50px;
     border-radius: 25px;
     box-shadow: $btn-shadow;
@@ -81,33 +94,216 @@ body {
     @include flex;
     @include flex-center;
     flex-direction: column;
+    padding: 20px;
 
     &__title {
-        @include bold-text-typo;
         @include text-center;
-        width: 275px;
         height: 68px;
         font-size: 1.5rem;
-        margin-top: 39px;
+        margin-top: 20px;
         color: $black-color;
     }
 
     &__text {
-        @include thin-text-typo;
         @include text-center;
-        width: 315px;
         height: 46px;
         font-size: 1.125rem;
         color: $dark-grey-color;
     }
 
     &__btn {
-        @include btn-text-typo;
         @include text-center;
         color: $white-color;
         padding: 13px 18px;
         margin-top: 27px;
-        margin-bottom: 57px;
+        margin-bottom: 37px;
     }
 }
 
+// Section Fonctionnement //
+.fonctionnement {
+    @include flex;
+    flex-direction: column;
+    padding: 20px;
+
+    &__title {
+        height: 31px;
+        font-size: 1.5rem;
+        color: $black-color;
+        margin: 28px 0 26px 0;
+    }
+
+    &__btn {
+        @include flex;
+        @include flex-center;
+        flex-direction: column;
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+    &__btn > button {
+        @include flex;
+        align-items: center;
+        position: relative;
+        width: 323px;
+        height: 73px;
+        border-radius: 20px;
+        box-shadow: $fonctionnement-btn-shadow;
+        background: $background-color;
+        padding: 28px 36px;
+    }
+
+    &__btn button > i {
+        width: 13px;
+        height: 19px;
+        color: $grey-tint;
+        margin-right: 27px;
+    }
+
+    &__btn button > .fa-store {
+        color: $main-color;
+    }
+
+    &__btn .btn__number {
+        @include flex;
+        @include flex-center;
+        @include text-typo(500);
+        font-size: 0.9rem;
+        color: $white-color;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        background: $main-color;
+        position: absolute;
+        left: -10px;
+    }
+}
+
+// Section Restaurants //
+.restaurants {
+    @include flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 48px;
+    padding-bottom: 66px;
+    background: $background-color;
+
+    &__title {
+        font-size: 1.5rem;
+        margin-top: 34px;
+        margin-bottom: 20px;
+    }
+
+    &__cards {
+        @include flex;
+        @include flex-center;
+        flex-direction: column;
+        gap: 18px;
+
+        .card {
+            width: 100%;
+            height: 251px;
+            box-shadow: $card-shadow;
+            background: $white-color;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .card > img {
+            object-fit: cover;
+            width: 100%;
+            height: 70%;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .card .card__content {
+            @include flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .card__text {
+                @include flex;
+                flex-direction: column;
+                gap: 5px;
+                margin: 12px 13px;
+
+                .card__title {
+                    font-size: 1.1rem;
+                    color: $black-color;
+                }
+            }
+
+            .card__text > p {
+                font-size: 1.063rem;
+                color: $black-color;
+            }
+
+            i {
+                width: 22px;
+                height: 21px;
+                font-size: 1.375rem;
+                margin-right: 25px;
+            }
+
+            .card__link {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+
+        .card .card__new {
+            @include flex;
+            @include flex-center;
+            font-size: 0.9rem;
+            border-radius: 2px;
+            padding: 7px 9px;
+            box-shadow: $main-shadow;
+            color: $green-color;
+            background: $green-background-color;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+    }
+}
+
+// Footer //
+.footer {
+    @include flex;
+    flex-direction: column;
+    padding: 22px 25px;
+    gap: 16px;
+    background: $dark-grey-color;
+
+    &__logo {
+        @include title-typo;
+        font-size: 1.1rem;
+        width: 138px;
+        height: 27px;
+        color: $white-color;
+    }
+
+    &__links {
+        @include flex;
+        flex-direction: column;
+        gap: 7px;
+
+        li,
+        a {
+            @include flex;
+            align-items: center;
+            @include neutral-style;
+            color: $white-color;
+            gap: 11px;
+        }
+
+        i {
+            width: 11px;
+            height: 13px;
+            font-size: 14px;
+        }
+    }
+}

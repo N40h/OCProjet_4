@@ -3,33 +3,18 @@
     padding: 0;
 }
 
-@mixin text-typo {
+@mixin text-typo ($fontWeight) {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     line-height: normal;
-    font-weight: 400;
+    font-weight: $fontWeight;
 }
 
-@mixin bold-text-typo {
-    @include text-typo;
-    font-weight: 700;
-}
-
-@mixin thin-text-typo {
-    @include text-typo;
-    font-weight: 300;
-}
-
-@mixin btn-text-typo {
-    @include text-typo;
-    font-weight: 500;
-}
-
-@mixin logo-and-title-typo {
+@mixin title-typo {
     font-family: 'Shrikhand', sans-serif;
-    font-weight: 400;
     font-style: normal;
     line-height: normal;
+    font-weight: 400;
 }
 
 @mixin text-center {
@@ -43,4 +28,10 @@
 @mixin flex-center {
     justify-content: center;
     align-items: center;
+}
+
+@mixin neutral-style {
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
 }

@@ -54,14 +54,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 63px;
   background: #FFF;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  padding: 14px 89px 13px 89px;
+  position: relative;
 }
 .header__logo {
   width: 197px;
   height: 36px;
-  padding: 14px 89px 13px 89px;
+}
+.header__link {
+  list-style-type: none;
+  text-decoration: none;
+  outline: none;
+  color: #353535;
+}
+.header__arrow {
+  display: flex;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  font-size: 25px;
+  position: absolute;
+  top: 17px;
+  left: 17px;
 }
 
 .location {
@@ -298,6 +314,79 @@ body {
   width: 11px;
   height: 13px;
   font-size: 14px;
+}
+
+.menu__banner {
+  object-fit: cover;
+  width: 100%;
+  height: 17rem;
+}
+
+.menu__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  border-radius: 20px 20px 0 0;
+  padding: 32px 17px;
+  position: relative;
+  top: -40px;
+  overflow: hidden;
+  background: #F6F6F6;
+}
+.menu__content__title {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.menu__content__title .menu__title {
+  font-family: "Shrikhand", sans-serif;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 400;
+  font-size: 1.75rem;
+}
+.menu__content__title i {
+  width: 22px;
+  height: 21px;
+  font-size: 1.375rem;
+}
+.menu__content .menu__entry {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.menu__content .menu__entry__title {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.menu__content .menu__entry__card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 15px;
+  padding: 15px;
+  background: #FFF;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.menu__content .menu__entry__card .card__title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.1rem;
+}
+.menu__content .menu__entry__content {
+  display: flex;
+  justify-content: space-between;
+}
+.menu__content .menu__entry__content .card__text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 0.938rem;
+}
+.menu__content .menu__entry__content .card__price {
+  color: #353535;
+  font-size: 0.938rem;
 }
 
 /*# sourceMappingURL=main.css.map */

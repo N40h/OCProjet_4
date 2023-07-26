@@ -326,17 +326,18 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  border-radius: 20px 20px 0 0;
+  border-radius: 40px 40px 0 0;
   padding: 32px 17px;
   position: relative;
-  top: -40px;
+  top: -55px;
   overflow: hidden;
   background: #F6F6F6;
+  margin-bottom: -55px;
 }
 .menu__content__title {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 45px;
 }
 .menu__content__title .menu__title {
   font-family: "Shrikhand", sans-serif;
@@ -350,16 +351,22 @@ body {
   height: 21px;
   font-size: 1.375rem;
 }
-.menu__content .menu__entry {
+.menu__content .menu__entry,
+.menu__content .menu__plats,
+.menu__content .menu__desserts {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.menu__content .menu__entry__title {
+.menu__content .menu__entry__title,
+.menu__content .menu__plats__title,
+.menu__content .menu__desserts__title {
   font-size: 1rem;
   text-transform: uppercase;
 }
-.menu__content .menu__entry__card {
+.menu__content .menu__entry__card,
+.menu__content .menu__plats__card,
+.menu__content .menu__desserts__card {
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -368,25 +375,42 @@ body {
   background: #FFF;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
-.menu__content .menu__entry__card .card__title {
+.menu__content .menu__entry__card .card__title,
+.menu__content .menu__plats__card .card__title,
+.menu__content .menu__desserts__card .card__title {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   font-size: 1.1rem;
 }
-.menu__content .menu__entry__content {
+.menu__content .menu__entry__content,
+.menu__content .menu__plats__content,
+.menu__content .menu__desserts__content {
   display: flex;
   justify-content: space-between;
 }
-.menu__content .menu__entry__content .card__text {
+.menu__content .menu__entry__content .card__text,
+.menu__content .menu__plats__content .card__text,
+.menu__content .menu__desserts__content .card__text {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   font-size: 0.938rem;
 }
-.menu__content .menu__entry__content .card__price {
+.menu__content .menu__entry__content .card__price,
+.menu__content .menu__plats__content .card__price,
+.menu__content .menu__desserts__content .card__price {
   color: #353535;
   font-size: 0.938rem;
+}
+.menu__content .menu__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu__content .menu__btn > button {
+  color: #FFF;
+  margin-bottom: 8px;
 }
 
 /*# sourceMappingURL=main.css.map */

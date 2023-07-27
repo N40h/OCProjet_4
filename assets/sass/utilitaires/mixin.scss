@@ -17,6 +17,10 @@
     font-weight: 400;
 }
 
+@mixin font-size ($size) {
+    font-size: $size;
+}
+
 @mixin text-center {
     text-align: center;
 }

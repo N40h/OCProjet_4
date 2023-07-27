@@ -11,6 +11,14 @@
     max-width: 768px;
     margin: auto;
     box-sizing: border-box;
+
+    @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        max-width: 1440px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        max-width: 1440px;
+    }
 }
 
 body {
@@ -18,14 +26,17 @@ body {
     font-size: 1rem;
 }
 
+// Font-weight 300 //
 .typo__thin {
     @include text-typo(300);
 }
 
+// Font-weight 500 //
 .typo__btn {
     @include text-typo(500);
 }
 
+// Font-weight 700 //
 .typo__bold {
     @include text-typo(700);
 }
@@ -50,9 +61,17 @@ body {
     padding: 14px 89px 13px 89px;
     position: relative;
 
+    @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        padding: 30px 0 32px 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        padding: 30px 0 32px 0;
+    }
+
     &__logo {
-        width: 197px;
-        height: 36px;
+        width: 200px;
+        height: 34px;
     }
 
     &__link {
@@ -65,7 +84,7 @@ body {
         align-items: center;
         width: 30px;
         height: 30px;
-        font-size: 25px;
+        @include font-size(25px);
         position: absolute;
         top: 17px;
         left: 17px;
@@ -97,7 +116,7 @@ body {
 
     &__form > input[type="text"] {
         height: 50px;
-        font-size: 1rem;
+        @include font-size(1rem);
         font-weight: 500;
         border: none;
         outline: none;
@@ -110,20 +129,41 @@ body {
     @include flex;
     @include flex-center;
     flex-direction: column;
-    padding: 20px;
+    padding: 0 20px;
+    gap: 5px;
+
+    @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        padding: 0;
+        gap: 12px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        padding: 0;
+        gap: 18px;
+    }
 
     &__title {
+        @include flex;
+        @include flex-center;
         @include text-center;
         height: 68px;
-        font-size: 1.5rem;
-        margin-top: 20px;
-        color: $black-color;
+        @include font-size(1.5rem);
+        margin-top: 30px;
+        color: $very-black-color;
+
+        @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+            @include font-size (2rem);
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            @include font-size(2.5rem);
+        }
     }
 
     &__text {
         @include text-center;
         height: 46px;
-        font-size: 1.125rem;
+        @include font-size(1.125rem);
         color: $dark-grey-color;
     }
 
@@ -132,7 +172,17 @@ body {
         color: $white-color;
         padding: 13px 18px;
         margin-top: 27px;
-        margin-bottom: 37px;
+        margin-bottom: 57px;
+
+        @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -140,30 +190,54 @@ body {
 .fonctionnement {
     @include flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 50px 20px;
+    margin-bottom: 18px;
+
+    @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        padding: 50px 30px;
+        margin-bottom: 0;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        padding: 50px 180px;
+        margin-bottom: 0;
+    }
 
     &__title {
         height: 31px;
-        font-size: 1.5rem;
-        color: $black-color;
-        margin: 28px 0 26px 0;
+        @include font-size(1.5rem);
+        color: $very-black-color;
+        margin-bottom: 25px;
     }
 
     &__btn {
         @include flex;
         @include flex-center;
         flex-direction: column;
-        gap: 25px;
+        gap: 24px;
         padding: 0 20px;
+
+        @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+            flex-direction: row;
+            padding: 0 10px;
+            width: 100%;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            flex-direction: row;
+            padding: 0 10px;
+            width: 100%;
+        }
     }
 
     &__btn > button {
         @include flex;
         align-items: center;
         position: relative;
-        width: 323px;
+        width: 100%;
         height: 73px;
         border-radius: 20px;
+        color: $very-black-color;
         box-shadow: $fonctionnement-btn-shadow;
         background: $background-color;
         padding: 28px 36px;
@@ -184,7 +258,7 @@ body {
         @include flex;
         @include flex-center;
         @include text-typo(500);
-        font-size: 0.9rem;
+        @include font-size(0.9rem);
         color: $white-color;
         width: 24px;
         height: 24px;
@@ -199,15 +273,33 @@ body {
 .restaurants {
     @include flex;
     flex-direction: column;
-    padding: 20px;
-    margin-top: 48px;
+    padding: 30px 20px;
     padding-bottom: 66px;
     background: $background-color;
 
+    @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        padding: 30px 130px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        padding: 30px 180px;
+    }
+
     &__title {
-        font-size: 1.5rem;
-        margin-top: 34px;
+        @include font-size(1.5rem);
+        margin-top: 24px;
         margin-bottom: 20px;
+        color: $very-black-color;
+
+        @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+            margin-top: 0;
+            margin-bottom: 28px;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            margin-top: 0;
+            margin-bottom: 28px;
+        }
     }
 
     &__cards {
@@ -216,6 +308,18 @@ body {
         flex-direction: column;
         gap: 18px;
 
+        @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+            gap: 30px;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
         .card {
             width: 100%;
             height: 251px;
@@ -223,6 +327,10 @@ body {
             background: $white-color;
             border-radius: 15px;
             position: relative;
+
+            @media (min-width: $breakpoint-desktop) {
+                width: 45%;
+            }
         }
 
         .card > img {
@@ -244,20 +352,20 @@ body {
                 margin: 12px 13px;
 
                 .card__title {
-                    font-size: 1.1rem;
-                    color: $black-color;
+                    @include font-size(1.1rem);
+                    color: $very-black-color;
                 }
             }
 
             .card__text > p {
-                font-size: 1.063rem;
-                color: $black-color;
+                @include font-size(1.063rem);
+                color: $very-black-color;
             }
 
             i {
                 width: 22px;
                 height: 21px;
-                font-size: 1.375rem;
+                @include font-size(1.375rem);
                 margin-right: 25px;
             }
 
@@ -294,11 +402,26 @@ body {
     gap: 16px;
     background: $dark-grey-color;
 
+    @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding: 30px 25px;
+        height: 54px;
+        gap: 40px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding: 30px 25px;
+        height: 84px;
+        gap: 90px;
+    }
+
     &__logo {
         @include title-typo;
-        font-size: 1.1rem;
+        @include font-size(1.1rem);
         width: 138px;
-        height: 27px;
         color: $white-color;
     }
 
@@ -306,6 +429,20 @@ body {
         @include flex;
         flex-direction: column;
         gap: 7px;
+
+        @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+            flex-direction: row;
+            li:nth-child(2) {
+                margin-right: 20px;
+            }
+        }
+        
+        @media (min-width: $breakpoint-desktop) {
+            flex-direction: row;
+            li:nth-child(2) {
+                margin-right: 40px;
+            }
+        }
 
         li,
         a {
@@ -319,7 +456,7 @@ body {
         i {
             width: 11px;
             height: 13px;
-            font-size: 14px;
+            @include font-size(0.875rem);
         }
     }
 }
@@ -345,18 +482,27 @@ body {
     
     &__title {
         @include flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 45px;
 
         .menu__title {
             @include title-typo;
-            font-size: 1.75rem;
+            @include font-size(1.75rem);
+            color: $black-color;
         }
 
-        i {
-            width: 22px;
-            height: 21px;
-            font-size: 1.375rem;
+        .menu__hearts__icons {
+            @include flex;
+            @include flex-center;
+            @include font-size(1.375rem);
+            margin: 0 25px;
+            position: relative;
+
+            i {
+                width: 22px;
+                height: 21px;
+                position: absolute;
+            }
         }
     }
     
@@ -368,8 +514,9 @@ body {
         gap: 12px;
 
         &__title {
-            font-size: 1rem;
+            @include font-size(1rem);
             text-transform: uppercase;
+            color: $very-black-color;
         }
 
         &__card {
@@ -377,7 +524,8 @@ body {
 
             .card__title {
                 @include ellipsis;
-                font-size: 1.1rem;
+                @include font-size(1.1rem);
+                color: $very-black-color;
             }
         }
 
@@ -387,12 +535,13 @@ body {
 
             .card__text {
                 @include ellipsis;
-                font-size: 0.938rem;
+                @include font-size(0.938rem);
+                color: $very-black-color;
             }
 
             .card__price {
                 color: $dark-grey-color;
-                font-size: 0.938rem;
+                @include font-size(0.938rem);
             }
         }
     }

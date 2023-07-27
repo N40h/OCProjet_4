@@ -79,15 +79,17 @@ body {
         color: $dark-grey-color;
     }
 
+    &__nav {
+        position: absolute;
+        left: 17px;
+    }
+
     &__arrow {
         @include flex;
         align-items: center;
         width: 30px;
         height: 30px;
         @include font-size(25px);
-        position: absolute;
-        top: 17px;
-        left: 17px;
     }
 }
 

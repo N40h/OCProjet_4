@@ -89,15 +89,16 @@ body {
   outline: none;
   color: #353535;
 }
+.header__nav {
+  position: absolute;
+  left: 17px;
+}
 .header__arrow {
   display: flex;
   align-items: center;
   width: 30px;
   height: 30px;
   font-size: 25px;
-  position: absolute;
-  top: 17px;
-  left: 17px;
 }
 
 .location {

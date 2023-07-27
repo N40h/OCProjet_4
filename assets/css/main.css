@@ -492,13 +492,37 @@ body {
   position: relative;
   top: -55px;
   overflow: hidden;
+  margin: auto;
   background: #F6F6F6;
   margin-bottom: -55px;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu__content {
+    max-width: 725px;
+    padding: 51px 160px 40px 160px;
+  }
+}
+@media (min-width: 1024px) {
+  .menu__content {
+    max-width: 1055px;
+    padding: 51px 210px 40px 210px;
+  }
 }
 .menu__content__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu__content__title {
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .menu__content__title {
+    justify-content: center;
+  }
 }
 .menu__content__title .menu__title {
   font-family: "Shrikhand", sans-serif;
@@ -583,7 +607,6 @@ body {
 }
 .menu__content .menu__btn > button {
   color: #FFF;
-  margin-bottom: 8px;
 }
 
 /*# sourceMappingURL=main.css.map */

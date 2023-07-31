@@ -1,5 +1,6 @@
 // Colors //
 $main-color: #9356DC;
+$test : #9356FF;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $black-color: #101010;
@@ -9,13 +10,14 @@ $grey-color: #EAEAEA;
 $dark-grey-color: #353535;
 $background-color: #F6F6F6;
 $grey-tint: #7E7E7E;
-$btn-color: linear-gradient(355deg, $main-color -10%, $secondary-color 120%);
+$btn-gradient-color: 355deg, $main-color -10%, $secondary-color 120%;
 $green-color: #008766;
 $green-background-color: #99E2D0;
 
 // Box-Shadow //
 $main-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 $btn-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+$btn-shadow-bigger: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 $fonctionnement-btn-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 $card-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
 

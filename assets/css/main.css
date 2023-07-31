@@ -28,6 +28,13 @@ body {
   font-size: 1rem;
 }
 
+a {
+  list-style-type: none;
+  text-decoration: none;
+  outline: none;
+  color: #000;
+}
+
 .typo__thin {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -58,6 +65,25 @@ body {
   border: none;
   outline: none;
   padding: 16px 48px;
+  position: relative;
+  z-index: 1;
+}
+.btn:hover::after {
+  opacity: 1;
+}
+.btn::after {
+  border-radius: 25px;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(355deg, #a16be0 -10%, #ff88de 120%);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 .header {
@@ -185,6 +211,7 @@ body {
   padding: 13px 18px;
   margin-top: 27px;
   margin-bottom: 57px;
+  cursor: pointer;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero__btn {
@@ -223,7 +250,7 @@ body {
   color: #000;
   margin-bottom: 25px;
 }
-.fonctionnement__btn {
+.fonctionnement__steps {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,20 +259,20 @@ body {
   padding: 0 20px;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
-  .fonctionnement__btn {
+  .fonctionnement__steps {
     flex-direction: row;
     padding: 0 10px;
     width: 100%;
   }
 }
 @media (min-width: 1024px) {
-  .fonctionnement__btn {
+  .fonctionnement__steps {
     flex-direction: row;
     padding: 0 10px;
     width: 100%;
   }
 }
-.fonctionnement__btn > button {
+.fonctionnement__steps > button {
   display: flex;
   align-items: center;
   position: relative;
@@ -257,16 +284,16 @@ body {
   background: #F6F6F6;
   padding: 28px 36px;
 }
-.fonctionnement__btn button > i {
+.fonctionnement__steps button > i {
   width: 13px;
   height: 19px;
   color: #7E7E7E;
   margin-right: 27px;
 }
-.fonctionnement__btn button > .fa-store {
+.fonctionnement__steps button > .fa-store {
   color: #9356DC;
 }
-.fonctionnement__btn .btn__number {
+.fonctionnement__steps .btn__number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,6 +309,16 @@ body {
   background: #9356DC;
   position: absolute;
   left: -10px;
+}
+
+.fonctionnement__step {
+  font-size: 1rem;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border: none;
+  outline: none;
+  padding: 16px 48px;
 }
 
 .restaurants {
@@ -347,13 +384,16 @@ body {
   background: #FFF;
   border-radius: 15px;
   position: relative;
+  list-style-type: none;
+  text-decoration: none;
+  outline: none;
 }
 @media (min-width: 1024px) {
   .restaurants__cards .card {
     width: 45%;
   }
 }
-.restaurants__cards .card > img {
+.restaurants__cards .card img {
   object-fit: cover;
   width: 100%;
   height: 70%;
@@ -378,18 +418,37 @@ body {
   font-size: 1.063rem;
   color: #000;
 }
-.restaurants__cards .card .card__content i {
+.restaurants__cards .card .card__content .card__hearts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px;
+  position: relative;
+}
+.restaurants__cards .card .card__content .card__hearts--empty {
+  position: absolute;
+}
+.restaurants__cards .card .card__content .card__hearts--empty:hover {
+  opacity: 0;
+}
+.restaurants__cards .card .card__content .card__hearts--full {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transition: 1500ms;
+}
+.restaurants__cards .card .card__content .card__hearts--full:hover {
+  opacity: 1;
+  transition: 1500ms;
+}
+.restaurants__cards .card .card__content .card__hearts i {
   width: 22px;
   height: 21px;
   font-size: 1.375rem;
-  margin-right: 25px;
-}
-.restaurants__cards .card .card__content .card__link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
 }
 .restaurants__cards .card .card__new {
   display: flex;
@@ -532,18 +591,38 @@ body {
   font-size: 1.75rem;
   color: #101010;
 }
-.menu__content__title .menu__hearts__icons {
+.menu__content__title .menu__hearts {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.375rem;
   margin: 0 25px;
   position: relative;
 }
-.menu__content__title .menu__hearts__icons i {
+.menu__content__title .menu__hearts--empty {
+  position: absolute;
+}
+.menu__content__title .menu__hearts--empty:hover {
+  opacity: 0;
+}
+.menu__content__title .menu__hearts--full {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transition: 1500ms;
+}
+.menu__content__title .menu__hearts--full:hover {
+  opacity: 1;
+  transition: 1500ms;
+}
+.menu__content__title .menu__hearts i {
   width: 22px;
   height: 21px;
   position: absolute;
+  font-size: 1.375rem;
 }
 .menu__content .menu__entry,
 .menu__content .menu__plats,
@@ -607,6 +686,7 @@ body {
 }
 .menu__content .menu__btn > button {
   color: #FFF;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

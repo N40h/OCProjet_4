@@ -1,0 +1,14 @@
+// Font-weight 300 //
+.typo__thin {
+    @include text-typo(300);
+}
+
+// Font-weight 500 //
+.typo__btn {
+    @include text-typo(500);
+}
+
+// Font-weight 700 //
+.typo__bold {
+    @include text-typo(700);
+}

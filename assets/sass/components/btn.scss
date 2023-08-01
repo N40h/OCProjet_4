@@ -1,0 +1,33 @@
+.btn {
+    font-size: 1rem;
+    height: 50px;
+    border-radius: 25px;
+    box-shadow: $btn-shadow;
+    background: linear-gradient($btn-gradient-color);
+    border: none;
+    outline: none;
+    padding: 16px 48px;
+    position: relative;
+    z-index: 1;
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &::after{
+        border-radius: 25px;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(355deg, lighten($main-color, 5) -10%, lighten($secondary-color, 3) 120%);
+        box-shadow: $btn-shadow-bigger;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 200ms ease-out 100ms;
+    }
+}

@@ -1,0 +1,29 @@
+// General //
+* {
+    @include reset-browser;
+}
+
+body {
+    @include text-typo(400);
+    font-size: 1rem;
+}
+
+a {
+    @include neutral-style;
+    color: $very-black-color;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 768px;
+    margin: auto;
+    box-sizing: border-box;
+
+    @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+        max-width: 1440px;
+    }
+
+    @media (min-width: $breakpoint-desktop) {
+        max-width: 1440px;
+    }
+}

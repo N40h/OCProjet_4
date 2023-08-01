@@ -645,12 +645,20 @@ a {
 .menu__content .menu__plats__card,
 .menu__content .menu__desserts__card {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
   border-radius: 15px;
-  padding: 15px;
   background: #FFF;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+.menu__content .menu__entry__card .card__layout,
+.menu__content .menu__plats__card .card__layout,
+.menu__content .menu__desserts__card .card__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px;
+  width: 100%;
 }
 .menu__content .menu__entry__card .card__title,
 .menu__content .menu__plats__card .card__title,
@@ -660,6 +668,37 @@ a {
   overflow: hidden;
   font-size: 1.1rem;
   color: #000;
+}
+.menu__content .menu__entry__card .card__check,
+.menu__content .menu__plats__card .card__check,
+.menu__content .menu__desserts__card .card__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 59px;
+  background: #99E2D0;
+  color: #FFF;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  transform: translateX(60px);
+  transition: all 500ms ease-in-out;
+}
+.menu__content .menu__entry__card .card__check i,
+.menu__content .menu__plats__card .card__check i,
+.menu__content .menu__desserts__card .card__check i {
+  font-size: 1.25rem;
+}
+.menu__content .menu__entry__card:hover .card__check,
+.menu__content .menu__plats__card:hover .card__check,
+.menu__content .menu__desserts__card:hover .card__check {
+  transform: translateX(0px);
+}
+.menu__content .menu__entry__card:hover .card__price,
+.menu__content .menu__plats__card:hover .card__price,
+.menu__content .menu__desserts__card:hover .card__price {
+  transform: translateX(-60px);
 }
 .menu__content .menu__entry__content,
 .menu__content .menu__plats__content,
@@ -681,6 +720,8 @@ a {
 .menu__content .menu__desserts__content .card__price {
   color: #353535;
   font-size: 0.938rem;
+  transform: translateX(0px);
+  transition: all 500ms ease-in-out;
 }
 .menu__content .menu__btn {
   display: flex;

@@ -323,35 +323,6 @@
                 color: $very-black-color;
             }
 
-            // .card__hearts {
-            //     @include flex;
-            //     @include flex-center;
-            //     margin: 35px;
-            //     position: relative;
-
-            //     &--empty {
-            //         position: absolute;
-
-            //         &:hover {
-            //             opacity: 0;
-            //         }
-            //     }
-
-            //     &--full {
-            //         position: absolute;
-            //         opacity: 0;
-            //         background: linear-gradient($main-color, $secondary-color);
-            //         background-clip: text;
-            //         -webkit-background-clip: text;
-            //         -webkit-text-fill-color: transparent;
-            //         color: transparent;
-            //         transition: opacity 1200ms ease-out 300ms;
-
-            //         &:hover {
-            //             opacity: 1;
-            //         }
-            //     }
-
             i {
                 width: 22px;
                 height: 21px;

@@ -104,12 +104,51 @@
         }
 
         &__card {
-            @include cards-menu;
+            @include flex;
+            border-radius: 15px;
+            background: $white-color;
+            box-shadow: $card-shadow;
+            position: relative;
+            overflow: hidden;
+
+            .card__layout {
+                @include flex;
+                flex-direction: column;
+                gap: 5px;
+                padding: 15px;
+                width: 100%;
+            }
 
             .card__title {
                 @include ellipsis;
                 @include font-size(1.1rem);
                 color: $very-black-color;
+            }
+
+            .card__check {
+                @include flex;
+                @include flex-center;
+                width: 59px;
+                background: $green-background-color;
+                color: $white-color;
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                transform: translateX(60px);
+                transition: all 500ms ease-in-out;
+
+                i {
+                    @include font-size(1.25rem);
+                }
+            }
+
+            &:hover .card__check {
+                transform: translateX(0px);
+            }
+
+            &:hover .card__price {
+                transform: translateX(-60px);
             }
         }
 
@@ -126,6 +165,8 @@
             .card__price {
                 color: $dark-grey-color;
                 @include font-size(0.938rem);
+                transform: translateX(0px);
+                transition: all 500ms ease-in-out;
             }
         }
     }

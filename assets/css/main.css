@@ -699,12 +699,14 @@ a {
 .menu__content .menu__plats__card:hover .card__price,
 .menu__content .menu__desserts__card:hover .card__price {
   transform: translateX(-60px);
+  padding-left: 20%;
 }
 .menu__content .menu__entry__content,
 .menu__content .menu__plats__content,
 .menu__content .menu__desserts__content {
   display: flex;
   justify-content: space-between;
+  gap: 5px;
 }
 .menu__content .menu__entry__content .card__text,
 .menu__content .menu__plats__content .card__text,

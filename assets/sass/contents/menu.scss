@@ -149,17 +149,21 @@
 
             &:hover .card__price {
                 transform: translateX(-60px);
+                padding-left: 20%;
             }
         }
+        
 
         &__content {
             @include flex;
             justify-content: space-between;
-
+            gap: 5px;
+            
             .card__text {
                 @include ellipsis;
                 @include font-size(0.938rem);
                 color: $very-black-color;
+                // width: 80%;
             }
 
             .card__price {

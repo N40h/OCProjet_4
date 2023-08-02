@@ -33,7 +33,6 @@
         @include flex;
         justify-content: space-between;
         align-items: center;
-        animation: menu-title 1000ms cubic-bezier(0.64, -0.51, 0.48, 1.41);
 
         @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
             justify-content: center;
@@ -50,35 +49,6 @@
         }
 
         .menu__hearts {
-            @include flex;
-            @include flex-center;
-            margin: 0 25px;
-            position: relative;
-
-            &--empty {
-                position: absolute;
-
-                &:hover {
-                    opacity: 0;
-                }
-            }
-
-            &--full {
-                position: absolute;
-                opacity: 0;
-                background: linear-gradient($main-color, $secondary-color);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                color: transparent;
-                transition: 1500ms;
-
-                &:hover {
-                    opacity: 1;
-                    transition: 1500ms;
-                }
-            }
-
             i {
                 width: 22px;
                 height: 21px;
@@ -172,18 +142,6 @@
                 transition: all 500ms ease-in-out;
             }
         }
-    }
-
-    .menu__entry {
-        animation: menu-slide 2700ms cubic-bezier(0.54, -0.31, 0.48, 1.41) both;
-    }
-
-    .menu__plats {
-        animation: menu-slide 2700ms cubic-bezier(0.54, -0.31, 0.48, 1.41) 900ms both;
-    }
-
-    .menu__desserts {
-        animation: menu-slide 2700ms cubic-bezier(0.54, -0.31, 0.48, 1.41) 1800ms both;
     }
 
     .menu__btn {

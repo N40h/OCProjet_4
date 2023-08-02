@@ -33,6 +33,7 @@
         @include flex;
         justify-content: space-between;
         align-items: center;
+        animation: menu-title 1000ms cubic-bezier(0.64, -0.51, 0.48, 1.41);
 
         @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
             justify-content: center;
@@ -153,7 +154,6 @@
             }
         }
         
-
         &__content {
             @include flex;
             justify-content: space-between;
@@ -163,7 +163,6 @@
                 @include ellipsis;
                 @include font-size(0.938rem);
                 color: $very-black-color;
-                // width: 80%;
             }
 
             .card__price {
@@ -173,6 +172,18 @@
                 transition: all 500ms ease-in-out;
             }
         }
+    }
+
+    .menu__entry {
+        animation: menu-slide 2700ms cubic-bezier(0.54, -0.31, 0.48, 1.41) both;
+    }
+
+    .menu__plats {
+        animation: menu-slide 2700ms cubic-bezier(0.54, -0.31, 0.48, 1.41) 900ms both;
+    }
+
+    .menu__desserts {
+        animation: menu-slide 2700ms cubic-bezier(0.54, -0.31, 0.48, 1.41) 1800ms both;
     }
 
     .menu__btn {

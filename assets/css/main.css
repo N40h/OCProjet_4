@@ -1,3 +1,22 @@
+@keyframes menu-slide {
+  0% {
+    transform: translateX(-150%);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes menu-title {
+  0% {
+    transform: translateY(-250%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -572,6 +591,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  animation: menu-title 1000ms cubic-bezier(0.64, -0.51, 0.48, 1.41);
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .menu__content__title {
@@ -724,6 +744,15 @@ a {
   font-size: 0.938rem;
   transform: translateX(0px);
   transition: all 500ms ease-in-out;
+}
+.menu__content .menu__entry {
+  animation: menu-slide 2700ms cubic-bezier(0.54, -0.31, 0.48, 1.41) both;
+}
+.menu__content .menu__plats {
+  animation: menu-slide 2700ms cubic-bezier(0.54, -0.31, 0.48, 1.41) 900ms both;
+}
+.menu__content .menu__desserts {
+  animation: menu-slide 2700ms cubic-bezier(0.54, -0.31, 0.48, 1.41) 1800ms both;
 }
 .menu__content .menu__btn {
   display: flex;

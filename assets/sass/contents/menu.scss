@@ -54,6 +54,7 @@
                 height: 21px;
                 position: absolute;
                 @include font-size(1.375rem);
+                cursor: pointer;
             }
         }
     }
@@ -81,6 +82,7 @@
             box-shadow: $card-shadow;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
 
             .card__layout {
                 @include flex;

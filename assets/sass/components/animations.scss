@@ -19,7 +19,6 @@
         background: linear-gradient($main-color, $secondary-color);
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         color: transparent;
         transition: opacity 1200ms ease-out 300ms;
 
@@ -49,7 +48,6 @@
         background: linear-gradient($main-color, $secondary-color);
         background-clip: text;
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         color: transparent;
         transition: opacity 1500ms ease-out 300ms;
 

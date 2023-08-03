@@ -94,11 +94,19 @@
         @include flex;
         @include flex-center;
         @include title-typo;
-        font-size: 6rem;
+        @include font-size(3rem);
         color: $very-black-color;
         position: relative;
         overflow: hidden;
         transition: all 5000ms;
-        animation: letters 1000ms 200ms both infinite ease-in-out alternate;        
+        animation: letters 1000ms 200ms both infinite ease-in-out alternate;
+
+        @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+            @include font-size(4rem);
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+            @include font-size(5rem);
+        }
     }
 }
